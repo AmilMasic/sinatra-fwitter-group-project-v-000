@@ -148,6 +148,7 @@ end
     else
       redirect to '/tweets'
     end
+  else
     redirect to '/login'
   end
  end
