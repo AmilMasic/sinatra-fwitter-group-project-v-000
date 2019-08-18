@@ -138,7 +138,7 @@ end
    end
  end
 
- delete '/delete' do
+ delete '/delete/:id' do
    binding.pry
    @tweet = Tweet.find_by_id(params[:id])
     if @tweet.user == current_user
