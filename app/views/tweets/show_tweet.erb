@@ -1,7 +1,7 @@
 <p>This is the show tweet page</p>
 
 <h3><%= @tweet.content %></h3>
-<form  action="/delete/<%=tweet.id%>" method="post">
+<form  action="/delete/" method="post">
     <input type="hidden" type="hidden" name="_method" value="delete">
     <input type="submit" name="Edit" value="Edit Tweet">
     <input type="submit" name="Delete" value="Delete Tweet">
