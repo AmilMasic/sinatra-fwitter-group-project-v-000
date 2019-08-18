@@ -138,7 +138,7 @@ end
    end
  end
 
- delete '/delete/:id' do
+ delete '/tweets/:id' do
    # binding.pry
   if logged_in?
   @tweet = Tweet.find_by_id(params[:id])
