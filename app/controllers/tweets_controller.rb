@@ -138,4 +138,13 @@ end
    end
  end
 
+ delete '/tweets/:id' do
+   @tweet = Tweet.find_by_id(params[:id])
+    if @tweet.user == current_user
+      @tweet.delete
+    else
+      redirect to '/tweets/:id'
+    end
+   redirect to '/recipes'
+ end
 end
