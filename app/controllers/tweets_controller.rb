@@ -139,6 +139,7 @@ end
  end
 
  delete '/delete' do
+   binding.pry
    @tweet = Tweet.find_by_id(params[:id])
     if @tweet.user == current_user
       @tweet.delete
