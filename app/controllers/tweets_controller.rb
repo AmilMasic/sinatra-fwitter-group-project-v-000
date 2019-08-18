@@ -138,14 +138,13 @@ end
    end
  end
 
- delete '/tweets/:id' do
+ delete '/tweets/:id/delete' do
    @tweet = Tweet.find_by_id(params[:id])
     if @tweet.user == current_user
       @tweet.delete
-      redirect to '/tweets'
-    else
       redirect to '/tweets/:id'
+    else
+      redirect to '/tweets'
     end
-
  end
 end
